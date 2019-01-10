@@ -6,18 +6,17 @@ import android.hardware.Camera;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
+
+
 import android.view.View;
-import android.view.Menu;
 import android.widget.ImageButton;
 
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.MobileAds;
+
+
 
 public class Flash_Light extends AppCompatActivity
 {
-    AdView mAdView;
+
     ImageButton b1;
     private Camera camera;
 
@@ -27,14 +26,8 @@ public class Flash_Light extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_flash__light);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
+        setContentView(R.layout.content_flash__light);
 
-        MobileAds.initialize(this,"ca-app-pub-8928299189790970/5004860736");
-        mAdView=(AdView)findViewById(R.id.adview);
-        AdRequest adRequest=new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
 
 
         b1=(ImageButton)findViewById(R.id.imageButton);
@@ -108,14 +101,6 @@ public class Flash_Light extends AppCompatActivity
     }
 
 
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_flash__light, menu);
-        return true;
-    }
 
 
 }
